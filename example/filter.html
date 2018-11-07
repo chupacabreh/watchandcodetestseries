@@ -1,0 +1,87 @@
+<script src="../tinytest.js"></script>
+<script>
+  //Example 1 runs length amount of times:
+  // filter([1, 2, 3], function() {
+  //    console.log(hi);
+  // })
+
+  //Example 2 has access to the ith element: 
+  // filter([1, 2, 3], function(number) {
+  //   console.log(number); 
+  // })
+
+  //Example 3 The index of the current element bing processed in the array:
+  //  filter([1, 2, 3], function(number, index) {
+  //   console.log(index); 
+  // })
+  
+  // Example 4 The array that filter() is being applied to the orginal array:
+  //   filter([1, 2, 3], function(number, index, originalArray) {
+  //     console.log(originalArray); 
+  //   })
+
+  //   Example 5 it needs to accept the optional this argument:
+  //   filter([1, 2, 3] function() {
+  //       console.log(this.name);
+  //   }, {name: 'Gordon'})
+
+  // Example 6 returns new duplicated array:
+  // var testArray = [1, 2, 3];
+  // var filteredArray = filter(testArray, function() {
+
+  // })
+  // testArray != filteredArray
+
+  // Example 7 test filtering functions: 
+  // var testArray = [1, 2, 3];
+  // var filteredArray = filter(testArray, function(element){
+  //     return element > 1; 
+  // })
+  // Expect filtered array to be [2, 3]
+
+
+
+tests({
+  'It should run the callback function array.length times.': function() {
+    fail();
+    // var numberOfTimesCallbackHasRun = 0;
+    // forEach([1, 2, 3], function() {
+    //   numberOfTimesCallbackHasRun++;
+    // })
+    // eq(numberOfTimesCallbackHasRun, 3); 
+  },
+
+  'It should pass in the ith element as the first argument to the callback.': function() {
+    fail();
+    // forEach([1], function(number) {
+    //   eq(number, 1);
+    // })
+  },
+  'It should pass in the ith position as the second argument to the callback': function() {
+    fail();
+    // forEach([1], function(number, index) {
+    //   //index === 0;
+    //   eq(index, 0);
+    // })
+  },
+  'It should pass in the original array as the the third argument to the callback.': function() {
+    fail();
+    // var testArray = [1, 2, 3];
+    // forEach(testArray, function(number, index, originalArray) {
+    //    eq(originalArray, testArray);
+    // })
+  },
+  'It should accept an optional this object': function() {
+    fail();
+    // forEach([1], function() {
+    //   eq(this.description, 'I should be accessible inside of the callback');
+    // }, {description: 'I should be accessible inside of the callback'})
+  },
+  'It should return a new aray, not the array being filtered': function() {
+    fail();
+  },
+  'It should return a new array that only has elements where callback() is true': function() {
+    fail();
+  }
+});
+</script>
